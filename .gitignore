@@ -1,0 +1,15 @@
+# Agent
+__pycache__/
+*.pyc
+*.db
+.env
+*.egg-info/
+dist/
+build/
+.ruff_cache/
+
+# iOS
+*.xcuserdata
+DerivedData/
+.build/
+*.ipa
