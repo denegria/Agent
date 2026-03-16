@@ -1,10 +1,34 @@
-# Agent — Your Personal AI Harness
+# 🎙️ Agent — Your Personal AI Harness
 
-A voice-first iOS app where users bring their own LLM API keys (Anthropic, OpenAI, Gemini, xAI/Grok) and plug them in once. The magic is **Harnesses** — swappable, pre-built agent configurations that combine system prompts, tools, knowledge, and integrations.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Platform](https://img.shields.io/badge/platform-iOS%2017+-lightgrey.svg)
+![Backend](https://img.shields.io/badge/backend-FastAPI%20%7C%20LangGraph-green.svg)
 
-## Project Structure
+A beautifully native, voice-first iOS app where you bring your own LLM API keys (Anthropic, OpenAI, Gemini, xAI/Grok) and plug them in once. 
 
-```
+The magic lies in **Harnesses** — swappable, pre-built agent configurations that combine system prompts, external tools, knowledge bases, and custom integrations so your AI acts exactly how you need it to.
+
+---
+
+<p align="center">
+  <!-- TODO: Replace with actual screenshot paths -->
+  <img src="https://via.placeholder.com/250x500.png?text=Home+Screen" width="250" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://via.placeholder.com/250x500.png?text=Voice+Interface" width="250" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://via.placeholder.com/250x500.png?text=Harness+Marketplace" width="250" />
+</p>
+
+## ✨ Features
+
+- **🔑 Bring Your Own Keys (BYOK):** No subscription lock-in. Use your own OpenAI, Anthropic, or Gemini API keys securely stored in the iOS Keychain.
+- **🔌 Swappable Harnesses:** Switch between a Coding Assistant, a Personal Therapist, or a Language Tutor in seconds.
+- **🗣️ Voice-First Native Experience:** Built with Apple Speech (STT) and seamless TTS support (ElevenLabs/Apple).
+- **🛒 Harness Marketplace:** Browse and install community-made or premium AI configurations natively.
+
+## 🛠️ Project Structure
+
+```text
 Agent/
 ├── docs/                    # Architecture & planning docs
 │   └── implementation_plan.md
@@ -16,20 +40,34 @@ Agent/
     └── app/                 # Auth, chat, harnesses, IAP, users
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
-### iOS
-Open `ios/Agent.xcodeproj` in Xcode → Run on iPhone 16 simulator.
+### iOS App
+1. Open `ios/Agent.xcodeproj` in Xcode.
+2. Select **iPhone 16 Pro** (or compatible iOS 17+ simulator).
+3. Hit `Cmd + R` to run.
 
-### Backend
-```bash
-cd backend
-pip install -e .
-uvicorn app.main:app --reload
-```
+### Backend Server
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Install the package in editable mode:
+   ```bash
+   pip install -e .
+   ```
+3. Run the Uvicorn dev server:
+   ```bash
+   uvicorn app.main:app --reload
+   ```
 
-## Tech Stack
-- **iOS**: SwiftUI, MVVM + @Observable, iOS 17+, StoreKit 2
-- **Backend**: Python 3.12, FastAPI, LangGraph, SQLite
-- **Voice**: Apple Speech (STT) + ElevenLabs/Apple TTS
-- **Hosting**: Fly.io
+## 💻 Tech Stack
+
+- **iOS:** SwiftUI, MVVM + `@Observable`, iOS 17+, StoreKit 2
+- **Backend:** Python 3.12, FastAPI, LangGraph, SQLite
+- **Voice Capabilities:** Apple Speech (STT) + ElevenLabs / Native Apple TTS
+- **Infrastructure:** Ready for Fly.io deployment
+
+---
+
+*Because generic chatbots are boring. Build your harness.*
